@@ -20,13 +20,18 @@ namespace apigus
 
         [OperationContract]
         [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json,
-           ResponseFormat = WebMessageFormat.Json, UriTemplate = "Student/{NoMahasiswa}")]
+           ResponseFormat = WebMessageFormat.Json, UriTemplate = "StudentNoMhs/{NoMahasiswa}")]
         Student GetStudentByNoMhs(string NoMahasiswa);
 
         [OperationContract]
         [WebInvoke(Method = "PUT", RequestFormat = WebMessageFormat.Json,
            ResponseFormat = WebMessageFormat.Json, UriTemplate = "AddStudent/{NoMahasiswa}")]
         string AddStudent(Student student, string NoMahasiswa);
+
+        [OperationContract]
+        [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json,
+            ResponseFormat = WebMessageFormat.Json, UriTemplate = "StudentNama/{Nama}")]
+        Student GetStudentByName(string Nama);
     }
 
 }

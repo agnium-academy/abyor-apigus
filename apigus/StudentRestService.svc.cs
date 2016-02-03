@@ -33,5 +33,10 @@ namespace apigus
             return repo.DeleteAStudent(NoMahasiswa);
         }
 
+        public Student GetStudentByName(string Nama)
+        {
+            return repo.GetStudentByName(Nama);
+        }
+
     }
 }

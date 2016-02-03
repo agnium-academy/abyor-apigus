@@ -10,6 +10,7 @@ namespace apigus
     {
         List<Student> GetAllStudents();
         Student GetStudentByNoMhs(string NoMahasiswa);
+        Student GetStudentByName(string Nama);
         Student AddNewStudent(Student item);
         bool DeleteAStudent(string NoMahasiswa);
         bool UpdateAStudent(Student item);

@@ -12,6 +12,7 @@ namespace apigus
 
         public StudentRepository()
         {
+
             AddNewStudent(new Student { Nama = "Agus", Alamat = "Bogor", Umur = 17 });
             AddNewStudent(new Student { Nama = "Haidar", Alamat = "Depok", Umur = 30 });
             AddNewStudent(new Student { Nama = "Ucuk", Alamat = "Bogor", Umur = 32 });
@@ -26,6 +27,11 @@ namespace apigus
         public Student GetStudentByNoMhs(string NoMahasiswa)
         {
             return students.Find(b => b.NoMahasiswa == int.Parse(NoMahasiswa));
+        }
+
+        public Student GetStudentByName(string Nama)
+        {
+            return students.Find(b => b.Nama.Contains(Nama));
         }
 
         public Student AddNewStudent(Student newStudent)
