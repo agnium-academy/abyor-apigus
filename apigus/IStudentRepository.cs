@@ -13,6 +13,5 @@ namespace apigus
         Student AddNewStudent(Student item);
         bool DeleteAStudent(string NoMahasiswa);
         bool UpdateAStudent(Student item);
-        bool AssignStudent(string kelas);
     }
 }
