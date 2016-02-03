@@ -11,9 +11,27 @@ namespace apigus
     // NOTE: In order to launch WCF Test Client for testing this service, please select StudentRestService.svc or StudentRestService.svc.cs at the Solution Explorer and start debugging.
     public class StudentRestService : IStudentRestService
     {
+        static IStudentRepository repo = new StudentRepository();
         public List<Student> GetStudentList()
         {
-            return Students.Instance.StudentList;
+            return repo.GetAllStudents();
         }
+
+        public Student GetStudentByNoMhs(string NoMahasiswa)
+        {
+            return repo.GetStudentByNoMhs(NoMahasiswa);
+        }
+
+        public string AddStudent(Student student, string NoMahasiswa)
+        {
+            Student newStudent = repo.AddNewStudent(student);
+            return "Nomor Mahasiswa=" + newStudent.NoMahasiswa;
+        }
+
+        public bool DeleteAStudent(string NoMahasiswa)
+        {
+            return repo.DeleteAStudent(NoMahasiswa);
+        }
+
     }
 }

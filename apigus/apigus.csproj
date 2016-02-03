@@ -93,9 +93,13 @@
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Service1.svc" />
     <Content Include="StudentRestService.svc" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StudentRepository.cs" />
+    <Compile Include="IStudentRepository.cs" />
     <Compile Include="IStudentRestService.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
